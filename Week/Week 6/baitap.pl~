@@ -1,0 +1,27 @@
+a_similaire_b([], []).
+a_similaire_b([a|Q1], [b|Q2]):- a_similaire_b(Q1,Q2).
+
+tous_a(Liste):- not(member(a, Liste)).
+
+/*remplacer_a_b_c(ListeEntree, ListeSortir) :- member(a, ListeEntree), re*/
+
+/*nieme(N,L) :-*/
+/*
+double([], []).
+double([A|A2], [B|B2]):- A = B, double(A2, B2).
+*/
+double(List) :- append(X,X,List).
+/*4*/
+palindrome(X) :- reverse(X, Y), Y = X.
+
+test(0,0).
+test(X, Y) :- X1 is X - 2, 
+			write(X),
+			test(X1, Y).
+			
+
+
+aplatir(L, L2) :- flatten(L, L2), member(X, L2),write(X), write(' '), fail.
+
+double(list) :- append(A,A,List).
+ 
